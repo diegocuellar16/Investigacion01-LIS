@@ -1,0 +1,339 @@
+/* =========================================
+   ESTILO MODERNO "SAMSUNG STORE" (TEMA AZUL)
+   Proyecto: Catálogo de Teléfonos
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+/* --- 1. ESTILOS GLOBALES --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8faff; /* Fondo blanco con un toque muy sutil de azul */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- 2. CABECERA (HEADER) CON TÍTULO AZUL --- */
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1px;
+    
+    /* Efecto de degradado azul para el título */
+    background: linear-gradient(135deg, #1a73e8, #42a5f5);
+    
+    /* Versión para navegadores WebKit (Chrome/Safari antiguos) */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Versión Estándar oficial (La que te pide el editor) */
+    background-clip: text;
+    color: transparent;
+    
+    display: inline-block;
+}
+
+header p {
+    color: #6c757d;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* --- 3. MENÚ DE NAVEGACIÓN (BOTONES ESTÉTICOS) --- */
+.nav-menu {
+    text-align: center;
+    margin: 10px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Separación entre los botones */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #1a73e8; /* Texto azul */
+    background-color: #e8f0fe; /* Fondo azul muy claro */
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    border-radius: 50px; /* Forma de píldora */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(26, 115, 232, 0.1); /* Sombra suave */
+}
+
+/* Efecto al pasar el ratón por los botones de navegación */
+.nav-menu a:hover {
+    background-color: #1a73e8; /* Se vuelve azul sólido */
+    color: #ffffff; /* Texto blanco */
+    transform: translateY(-3px); /* Se eleva un poco */
+    box-shadow: 0 6px 15px rgba(26, 115, 232, 0.3); /* Sombra más grande */
+}
+
+/* --- 4. CATÁLOGO DE PRODUCTOS (index.php) --- */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.producto-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    border: 1px solid #eef2f6;
+}
+
+.producto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(26, 115, 232, 0.1); /* Sombra con un toque azul al hacer hover */
+}
+
+.producto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    transition: transform 0.4s ease;
+}
+
+.producto-card:hover img {
+    transform: scale(1.05);
+}
+
+.producto-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #202124;
+}
+
+.producto-card p.desc {
+    font-size: 14px;
+    color: #5f6368;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.producto-card .precio {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #1a73e8; /* Precio en azul para destacar */
+}
+
+/* --- 5. FORMULARIOS (admin.php y editar.php) --- */
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 10px 30px rgba(26, 115, 232, 0.05);
+}
+
+/* --- OCULTAR FLECHAS EN LOS CAMPOS DE NÚMERO --- */
+
+/* Para navegadores como Chrome, Safari y Edge */
+.form-group input[type=number]::-webkit-inner-spin-button, 
+.form-group input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Para el navegador Firefox */
+.form-group input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #1a73e8; /* Títulos de formulario en azul */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #dce1e6;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f8faff;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1a73e8; /* Borde azul al escribir */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.15); /* Resplandor azul */
+}
+
+/* --- 6. TABLAS DE ADMINISTRACIÓN --- */
+.table-container {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    text-align: left;
+}
+
+.admin-table th, 
+.admin-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.admin-table th {
+    background-color: #f8faff;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1a73e8; /* Cabeceras de tabla en azul */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-table tr:hover td {
+    background-color: #f4f8ff; /* Fila azul muy claro al pasar el ratón */
+}
+
+.admin-table img {
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* --- 7. BOTONES PRINCIPALES Y SECUNDARIOS --- */
+.btn {
+    display: inline-block;
+    background-color: #1a73e8; /* Botón principal azul brillante */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(26, 115, 232, 0.3);
+}
+
+.btn:hover {
+    background-color: #1557b0; /* Azul oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(26, 115, 232, 0.4);
+}
+
+.btn-comprar {
+    width: max-content;
+    margin: 0 auto;
+}
+
+/* Botones secundarios (Editar) */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #1a73e8;
+    border: 2px solid #1a73e8;
+}
+
+.btn-outline:hover {
+    background-color: #1a73e8;
+    color: #fff;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Botones de peligro (Eliminar) */
+.btn-danger {
+    background-color: #fff;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- 8. MENSAJE FLOTANTE (TOAST) --- */
+.toast {
+    visibility: hidden;
+    min-width: 280px;
+    background-color: #dc3545; /* Rojo para errores */
+    color: #fff;
+    text-align: center;
+    border-radius: 50px; /* Bordes redondeados estilo píldora */
+    padding: 16px 25px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s, visibility 0.3s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; /* Sube un poco al aparecer */
+}
