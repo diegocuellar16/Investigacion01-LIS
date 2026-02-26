@@ -12,7 +12,7 @@ $resultado = $conn->query($query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | Galaxy Store</title>
+    <title>Catálogo | Smart Phone Legacy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -72,3 +72,4 @@ $resultado = $conn->query($query);
 </body>
 
 </html>
+
