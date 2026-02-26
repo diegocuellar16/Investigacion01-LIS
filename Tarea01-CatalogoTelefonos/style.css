@@ -1,14 +1,11 @@
-/* =========================================
-   ESTILO MODERNO "SAMSUNG STORE" (TEMA AZUL)
-   Proyecto: Catálogo de Teléfonos
-   ========================================= */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-/* --- 1. ESTILOS GLOBALES --- */
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8faff; /* Fondo blanco con un toque muy sutil de azul */
+    background-color: #f8faff; 
     color: #333333;
     margin: 0;
     padding: 0;
@@ -21,7 +18,7 @@ body {
     padding: 40px 20px;
 }
 
-/* --- 2. CABECERA (HEADER) CON TÍTULO AZUL --- */
+
 header {
     text-align: center;
     padding: 40px 20px 20px 20px;
@@ -33,14 +30,14 @@ header h1 {
     margin: 0;
     letter-spacing: -1px;
     
-    /* Efecto de degradado azul para el título */
+   
     background: linear-gradient(135deg, #1a73e8, #42a5f5);
     
-    /* Versión para navegadores WebKit (Chrome/Safari antiguos) */
+  
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
-    /* Versión Estándar oficial (La que te pide el editor) */
+  
     background-clip: text;
     color: transparent;
     
@@ -54,38 +51,38 @@ header p {
     font-weight: 400;
 }
 
-/* --- 3. MENÚ DE NAVEGACIÓN (BOTONES ESTÉTICOS) --- */
+
 .nav-menu {
     text-align: center;
     margin: 10px 0 40px 0;
     display: flex;
     justify-content: center;
-    gap: 15px; /* Separación entre los botones */
+    gap: 15px;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: #1a73e8; /* Texto azul */
-    background-color: #e8f0fe; /* Fondo azul muy claro */
+    color: #1a73e8; 
+    background-color: #e8f0fe; 
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 12px 28px;
-    border-radius: 50px; /* Forma de píldora */
+    border-radius: 50px; 
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(26, 115, 232, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 6px rgba(26, 115, 232, 0.1); 
 }
 
-/* Efecto al pasar el ratón por los botones de navegación */
+
 .nav-menu a:hover {
-    background-color: #1a73e8; /* Se vuelve azul sólido */
-    color: #ffffff; /* Texto blanco */
-    transform: translateY(-3px); /* Se eleva un poco */
-    box-shadow: 0 6px 15px rgba(26, 115, 232, 0.3); /* Sombra más grande */
+    background-color: #1a73e8;
+    color: #ffffff;
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(26, 115, 232, 0.3);
 }
 
-/* --- 4. CATÁLOGO DE PRODUCTOS (index.php) --- */
+
 .catalogo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -107,7 +104,7 @@ header p {
 
 .producto-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(26, 115, 232, 0.1); /* Sombra con un toque azul al hacer hover */
+    box-shadow: 0 15px 30px rgba(26, 115, 232, 0.1);
 }
 
 .producto-card img {
@@ -140,10 +137,10 @@ header p {
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 25px;
-    color: #1a73e8; /* Precio en azul para destacar */
+    color: #1a73e8;
 }
 
-/* --- 5. FORMULARIOS (admin.php y editar.php) --- */
+
 .form-container {
     background-color: #ffffff;
     border: 1px solid #eef2f6;
@@ -154,16 +151,16 @@ header p {
     box-shadow: 0 10px 30px rgba(26, 115, 232, 0.05);
 }
 
-/* --- OCULTAR FLECHAS EN LOS CAMPOS DE NÚMERO --- */
 
-/* Para navegadores como Chrome, Safari y Edge */
+
+
 .form-group input[type=number]::-webkit-inner-spin-button, 
 .form-group input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
     margin: 0; 
 }
 
-/* Para el navegador Firefox */
+
 .form-group input[type=number] {
     -moz-appearance: textfield;
 }
@@ -172,7 +169,7 @@ header p {
     margin-top: 0;
     margin-bottom: 25px;
     font-size: 24px;
-    color: #1a73e8; /* Títulos de formulario en azul */
+    color: #1a73e8; 
 }
 
 .form-group {
@@ -205,12 +202,12 @@ header p {
 .form-group input:focus, 
 .form-group textarea:focus {
     outline: none;
-    border-color: #1a73e8; /* Borde azul al escribir */
+    border-color: #1a73e8; 
     background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.15); /* Resplandor azul */
+    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.15);
 }
 
-/* --- 6. TABLAS DE ADMINISTRACIÓN --- */
+
 .table-container {
     overflow-x: auto;
     border-radius: 16px;
@@ -235,13 +232,13 @@ header p {
     background-color: #f8faff;
     font-weight: 700;
     font-size: 14px;
-    color: #1a73e8; /* Cabeceras de tabla en azul */
+    color: #1a73e8; 
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .admin-table tr:hover td {
-    background-color: #f4f8ff; /* Fila azul muy claro al pasar el ratón */
+    background-color: #f4f8ff; 
 }
 
 .admin-table img {
@@ -249,10 +246,10 @@ header p {
     object-fit: contain;
 }
 
-/* --- 7. BOTONES PRINCIPALES Y SECUNDARIOS --- */
+
 .btn {
     display: inline-block;
-    background-color: #1a73e8; /* Botón principal azul brillante */
+    background-color: #1a73e8; 
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
@@ -267,7 +264,7 @@ header p {
 }
 
 .btn:hover {
-    background-color: #1557b0; /* Azul oscuro al pasar el ratón */
+    background-color: #1557b0; 
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(26, 115, 232, 0.4);
 }
@@ -277,7 +274,7 @@ header p {
     margin: 0 auto;
 }
 
-/* Botones secundarios (Editar) */
+
 .btn-sm {
     padding: 8px 16px;
     font-size: 12px;
@@ -297,7 +294,7 @@ header p {
     box-shadow: none;
 }
 
-/* Botones de peligro (Eliminar) */
+
 .btn-danger {
     background-color: #fff;
     color: #dc3545;
@@ -311,14 +308,14 @@ header p {
     box-shadow: none;
 }
 
-/* --- 8. MENSAJE FLOTANTE (TOAST) --- */
+
 .toast {
     visibility: hidden;
     min-width: 280px;
-    background-color: #dc3545; /* Rojo para errores */
+    background-color: #dc3545; 
     color: #fff;
     text-align: center;
-    border-radius: 50px; /* Bordes redondeados estilo píldora */
+    border-radius: 50px; 
     padding: 16px 25px;
     position: fixed;
     z-index: 1000;
@@ -335,5 +332,6 @@ header p {
 .toast.show {
     visibility: visible;
     opacity: 1;
-    bottom: 50px; /* Sube un poco al aparecer */
+    bottom: 50px; 
+
 }
