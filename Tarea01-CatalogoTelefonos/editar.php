@@ -110,53 +110,49 @@ if (isset($_POST['actualizar'])) {
     <div id="mensaje-toast" class="toast"></div>
 
    <script>
-        /* =========================================================
-           1. BLOQUEO EN TIEMPO REAL (LETRAS Y NÚMEROS NEGATIVOS)
-           ========================================================= */
+       
         let inputAnio = document.querySelector('input[name="year_s"]');
         let inputPrecio = document.querySelector('input[name="precio"]');
 
         function bloquearInvalidos(evento) {
-            // 1. Bloqueamos las flechas de Arriba y Abajo del teclado
+           
             if (evento.key === 'ArrowUp' || evento.key === 'ArrowDown') {
-                evento.preventDefault(); // Evita que el número suba o baje
+                evento.preventDefault(); 
             }
-            // 2. Bloqueamos letras (permitiendo Backspace, Tab, etc.)
+            
             else if (evento.key.length === 1 && evento.key.match(/[a-zA-ZñÑ]/)) {
                 evento.preventDefault(); 
                 mostrarMensajeFlotante('No puede escribir letras en el año y en el precio.', '#dc3545');
             }
-            // 3. Bloqueamos el signo de menos (-)
+           
             else if (evento.key === '-') {
                 evento.preventDefault(); 
                 mostrarMensajeFlotante('No se permiten números negativos.', '#dc3545');
             }
         }
 
-        // Le asignamos esta función a los campos numéricos
+       
         if (inputAnio) inputAnio.addEventListener('keydown', bloquearInvalidos);
         if (inputPrecio) inputPrecio.addEventListener('keydown', bloquearInvalidos);
 
 
-        /* =========================================================
-           2. VALIDACIÓN AL PRESIONAR "GUARDAR / ACTUALIZAR"
-           ========================================================= */
+        
         document.getElementById('form-valida').addEventListener('submit', function(evento) {
             let valido = true;
             let mensajeAlerta = 'Por favor, completa todos los campos requeridos para continuar.';
             
-            // A. Validar que no haya campos requeridos vacíos
+           
             let camposRequeridos = this.querySelectorAll('[required]');
             camposRequeridos.forEach(function(campo) {
                 if (campo.value.trim() === '') {
                     valido = false;
-                    campo.style.borderColor = '#dc3545'; // Borde rojo
+                    campo.style.borderColor = '#dc3545'; 
                 } else {
-                    campo.style.borderColor = '#dce1e6'; // Borde normal
+                    campo.style.borderColor = '#dce1e6'; 
                 }
             });
 
-            // B. Validar usando Expresiones Regulares (Regex) y valores positivos
+            
             if (valido) {
                 let marca = document.querySelector('input[name="marca"]');
                 let anio = document.querySelector('input[name="year_s"]');
@@ -183,16 +179,14 @@ if (isset($_POST['actualizar'])) {
                 }
             }
 
-            // Si se detectó un error, se cancela el envío y se muestra el Toast
+            
             if (!valido) {
                 evento.preventDefault(); 
                 mostrarMensajeFlotante(mensajeAlerta, '#dc3545');
             }
         });
 
-        /* =========================================================
-           3. FUNCIÓN PARA MOSTRAR EL MENSAJE FLOTANTE (TOAST)
-           ========================================================= */
+      
         function mostrarMensajeFlotante(mensaje, color) {
             let toast = document.getElementById("mensaje-toast");
             toast.innerText = mensaje;
@@ -205,4 +199,5 @@ if (isset($_POST['actualizar'])) {
         }
     </script>
 </body>
+
 </html>
